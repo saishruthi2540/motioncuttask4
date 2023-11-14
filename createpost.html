@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Create Blog Post</title>
+ <style>
+ body, h1, form, input, textarea, button {
+ margin: 0;
+ padding: 0;
+ }
+ header {
+ background-color: #333;
+ color: #FFF;
+ padding: 20px;
+ }
+ 
+ header h1 {
+ margin: 0;
+ }
+ 
+ main {
+ padding: 20px;
+ background-image: 
+url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/8A5Rc7N/PfH+ChVZJ8Ww+niN4nusoOqagZPA8B7r//2Q==");
+ background-size: cover;
+
+ background-repeat: no-repeat;
+ height: 100vh;
+ }
+ 
+ form {
+ display: flex;
+ flex-direction: column;
+ border-radius: 4px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ input, textarea {
+ padding: 10px;
+ margin-bottom: 10px;
+ border: 1px solid #CCC;
+ border-radius: 5px;
+ width: 700px;
+ }
+ 
+ button {
+ background-color: #333;
+ color: #FFF;
+ border: none;
+ padding: 10px;
+ border-radius: 5px;
+ cursor: pointer;
+ width: 100px;
+ display: block;
+ margin: 0 auto;
+ }
+ 
+ button:hover {
+ background-color: #555;
+ }
+ 
+ button:active {
+ background-color: #111;
+
+ }
+ 
+ .select-wrapper {
+ position: relative;
+ width: 250px;
+ }
+ 
+ select {
+ padding: 10px;
+ border: 1px solid #CCC;
+ border-radius: 5px;
+ appearance: none;
+ width: 100%;
+ }
+ 
+ select:focus {
+ outline: none;
+ }
+ 
+ .select-icon {
+ position: absolute;
+ top: 50%;
+ right: 10px;
+ transform: translateY(-50%);
+ pointer-events: none;
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <h1>Create Blog Post</h1>
+ </header>
+ <main>
+ <form id="blog-form">
+ <input type="text" id="title" placeholder="Title" required>
+ <textarea id="content" placeholder="Content" required></textarea>
+
+ <input type="file" id="file" required>
+ <input type="text" id="purpose" placeholder="Purpose" required>
+ <div class="select-wrapper">
+ <select id="category" required>
+ <option value="" disabled selected>Select Category</option>
+ <option value="Category 1">Food and Receipies</option>
+ <option value="Category 2">Fashion and Styles</option>
+ <option value="Category 3">health and wellness</option>
+ <option value="Category 3">Travel and adventure</option>
+ <option value="Category 3">Online job hunting</option>
+ <option value="Category 3">Entertainment and media</option>
+ <option value="Category 3">Education and Learning</option>
+ <option value="Category 3">Home Improvement and DIY</option>
+ <!-- Add more category options here -->
+ </select>
+ <span class="select-icon">&#9660;</span>
+ </div>
+ <button type="submit">Publish</button>
+ </form>
+ </main>
+ <script>
+ document.getElementById('blog-form').addEventListener('submit', function(event) {
+ event.preventDefault(); 
+ alert('Published successfully');
+ 
+ document.getElementById('blog-form').reset();
+ });
+</script>
+</body>
+</html>

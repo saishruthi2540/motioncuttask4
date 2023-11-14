@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+#about-me {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Add more styles as needed */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scrollText 15s linear infinite;
+    animation-delay: 2s; 
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
